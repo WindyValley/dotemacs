@@ -154,7 +154,7 @@
 		   :custom
 		   (default-input-method "rime")
 		   :config
-		   (setq rime-user-data-dir "~/.config/fcitx/rime")
+		   (setq rime-user-data-dir "~/.local/share/fcitx5/rime")
 
 		   (setq rime-posframe-properties
 				 (list :background-color "#333333"
@@ -164,11 +164,6 @@
 		   (setq default-input-method "rime"
 				 rime-show-candidate 'posframe)))
 	  graphic-only-plugins-setting)
-
-;; 饥饿删除（一次性删除多个连续的空白符）
-(use-package hungry-delete
-  :ensure t
-  :hook ('prog-mode . 'global-hungry-delete-mode))
 
 ;; 相对行号，默认未开启
 (use-package linum-relative

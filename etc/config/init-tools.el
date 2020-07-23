@@ -105,7 +105,7 @@
 ;; Emacs下最好用的终端仿真器，需要编译库，默认不开启
 (use-package 
   vterm
-  :ensure nil
+  :ensure t
   :defer 2 
   :bind (:map leader-key
               ("o t" . 'vterm)))
@@ -126,6 +126,7 @@
 ;; Emacs下的音乐播放器，自带一个函数将~/Music下的所有音乐导入进Bongo再自动播放(bongo-init)
 (use-package 
   bongo
+  :disabled
   :ensure t
   :hook (after-init . bongo)
   :config (defun bongo-init () 

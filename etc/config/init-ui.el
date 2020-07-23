@@ -1,5 +1,5 @@
 ;; 加载主题
-(load-file "~/.emacs.d/themes/oswald-theme.el")
+;; (load-file "~/.emacs.d/themes/oswald-theme.el")
 ;; 设置透明
 ;; (set-frame-parameter nil 'alpha '(85 .100))
 ;; 设置光标颜色
@@ -9,24 +9,15 @@
 ;; 去除默认启动界面
 (setq inhibit-startup-message nil)
 ;; 设置英文字体
-(push '(if (fontp (font-spec
-				   ;; :name "Fira Code Nerd Font" 
-				   ;; :style "Retina"
-				   :name "Iosevka"
-				   :style "Regular"
-				   ;; :name "Sarasa Mono SC"
-				   ;; :style "Regular"
-				   )) 
-		   (set-face-attribute 'default nil 
-							   :font (font-spec 
-									  ;; :name "Fira Code Nerd Font"
-									  ;; :style "Retina"
-									  :name "Iosevka"
-									  :style "Regular"
-									  ;; :name "Sarasa Mono SC"
-									  ;; :style "Regular"
-									  :size 20)) 
-		 (message "无法找到Sarasa Mono SC字体，你可以更换其他字体或安装它让这条消息消失.")) graphic-only-plugins-setting)
+(push '(progn
+		 (setq fonts '("Fira Code Nerd Font" "Sarasa Mono SC"))
+ 	     (set-face-attribute 'default nil :font
+				 (format "%s:pixelsize=%d" (car fonts) 20))
+
+		 (dolist (charset '(kana han symbol cjk-misc bopomofo))
+		         (set-fontset-font (frame-parameter nil 'font) charset
+                   (font-spec :family (car (cdr fonts))))))
+	  graphic-only-plugins-setting)
 
 ;; 高亮当前行
 (global-hl-line-mode 1)
@@ -59,7 +50,7 @@
 	calendar-longitude 113.288879
 	;; sunrise 白天用的主题 sunset 晚上用的主题
 	circadian-themes '((:sunrise . doom-monokai-pro)
-			   (:sunset . oswald)))
+			   (:sunset . doom-dracula)))
   (circadian-setup))
 
 (push '(progn (use-package 
