@@ -12,13 +12,16 @@
 (push '(progn
 		 (setq fonts '("Fira Code Nerd Font" "Sarasa Mono SC"))
  	     (set-face-attribute 'default nil :font
-				 (format "%s:pixelsize=%d" (car fonts) 20))
+				 (font-spec :family (car fonts) :size 20))
 
 		 (dolist (charset '(kana han symbol cjk-misc bopomofo))
 		         (set-fontset-font (frame-parameter nil 'font) charset
-                   (font-spec :family (car (cdr fonts))))))
+                   (font-spec :family (car (cdr fonts)) :size 24))))
 	  graphic-only-plugins-setting)
-
+(push '(progn
+		 (add-to-list 'default-frame-alist '(width . 800))
+		 (add-to-list 'default-frame-alist '(height . 600)))
+	  graphic-only-plugins-setting)
 ;; 高亮当前行
 (global-hl-line-mode 1)
 
@@ -26,15 +29,16 @@
 (use-package
   beacon
   :ensure t
-  :hook (after-init . beacon-mode))
+  :hook (after-init . beacon-mode)
+)
 
 ;; 主题包
 (use-package 
   doom-themes 
   :ensure t
   :defer
-  ;; :config (load-theme 'doom-dracula t))
-  )
+  ;; :config (load-theme 'doom-dracula))
+)
 (use-package
   spacemacs-common
   :ensure spacemacs-theme
@@ -62,7 +66,6 @@
     :hook ('dired-mode . 'all-the-icons-dired-mode)) 
   (use-package 
     emojify
-    :after telega
     :custom (emojify-emojis-dir "~/.emacs.d/var/emojis")
     :config
     (global-emojify-mode)) 

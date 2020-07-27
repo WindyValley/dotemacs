@@ -24,7 +24,7 @@
 (use-package
   hydra-posframe
   :load-path "~/.emacs.d/site-lisp/hydra-posframe"
-  :hook (after-init . hydra-posframe-enable))
+  :hook (after-init . hydra-posframe-mode))
 
 (use-package
   major-mode-hydra
@@ -122,10 +122,8 @@
   (
    "EAF"
    (("e" evan/eaf-hydra/body "EAF"))
-   "Telega"
-   (("t" telega "启动Telega")
-	("c" ivy-telega-chat-with "选择联系人")
-	("n" (lambda () (message "占位"))))))
+  )
+)
 
 ;; EAF键绑定
 (pretty-hydra-define evan/eaf-hydra (:color blue)
@@ -186,6 +184,6 @@
   ("a" evan/hydra-app-menu/body nil :color blue)
   ("q" nil "QUIT" :color blue))
 
-(global-set-key (kbd "s-,") #'evan/hydra-main-menu/body)
+(global-set-key (kbd "M-,") #'evan/hydra-main-menu/body)
 
 (provide 'init-keybind)

@@ -167,7 +167,7 @@
 
 ;; 相对行号，默认未开启
 (use-package linum-relative
-  :disabled
+  ;; :disabled
   :ensure t
   :hook ('prog-mode . 'linum-relative-mode))
 
