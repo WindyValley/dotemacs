@@ -3,11 +3,11 @@
 			 eaf 
 			 :load-path "~/.emacs.d/site-lisp/emacs-application-framework" 
 			 :custom (eaf-find-alternate-file-in-dired t)
-			 (eaf-proxy-type "socks5")
-			 (eaf-proxy-host "127.0.0.1")
-			 (eaf-proxy-port "1088")
+			 ;(eaf-proxy-type "socks5")
+			 ;(eaf-proxy-host "127.0.0.1")
+			 ;(eaf-proxy-port "1088")
 			 :config
-			 (setq eaf-grip-token "32872f2ccde165e5d36548619681c7b7e7ec8793")
+			 (setq eaf-grip-token "9d443a8acf7ea55e888935d94270e2e93376ef44")
 			 (eaf-setq eaf-pdf-dark-mode "true")
 			 (eaf-setq eaf-browser-dark-mode "true") 
 			 (eaf-setq eaf-mindmap-dark-mode "true")
