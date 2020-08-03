@@ -50,8 +50,8 @@
   :ensure t
   :config
   ;; 经纬度，可以在https://www.latlong.net/获取，默认是广州的
-  (setq calendar-latitude 23.130280
-	calendar-longitude 113.288879
+  (setq calendar-latitude 31.468204
+	calendar-longitude 114.228952
 	;; sunrise 白天用的主题 sunset 晚上用的主题
 	circadian-themes '((:sunrise . doom-monokai-pro)
 			   (:sunset . doom-dracula)))
