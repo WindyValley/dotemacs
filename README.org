@@ -1,4 +1,5 @@
 #+STARTUP: overview
+#+AUTHOR: Evan Meek & WindyValley
 * 简介
   [[file:var/banner/EvanEmacsPreview.png]]
   本配置是基于[[https://github.com/EvanMeek][EvanMeek]]的Emacs配置调整所得，本人正处于Emacs学习阶段，对于配置内容并不算熟悉，如有疑问请加群（作者创建，群号在末尾）。
@@ -12,23 +13,33 @@
     - Python
     - libvterm :: vterm需要
       * Ubuntu/Debian
-        ~apt install libvterm~
+		#+BEGIN_SRC bash
+        apt install libvterm
+		#+END_SRC
       * ArchLinux
-        ~pacman -S libvterm~
+		#+BEGIN_SRC bash
+        pacman -S libvterm
+		#+END_SRC
     - [[https://github.com/junegunn/fzf][fzf]]
     - [[https://github.com/BurntSushi/ripgrep][ripgrep]]
-    - tdlib :: telega需要
-      * ArchLinux #archlinuxcn
-	~pacman -S libtd-git~
 ** 字体
    - all-the-icons
    - Fira Code
    - Sarasa Mono
 ** 安装
-   ~>mv ~/.emacs.d/ ~/.emacs.d_bak &&  git clone https://github.com/EvanMeek/.emacs.d ~/.emacs.d
+   ~>mv ~/.emacs.d/ ~/.emacs.d.bak &&  git clone https://github.com/WindyValley/.emacs.d ~/.emacs.d
 * 注意事项
+** EAF
+   由于我不常启用代理，我把EAF的代理设置项给注释掉了，如果需要使用，请在init-tools.el中自行修改
 ** 平台兼容性
-   本配置只在GNU/Linux下测试过，如果有其他平台遇到的Bug可能无法提供解决方案。
+   +本配置只在GNU/Linux下测试过，如果有其他平台遇到的Bug可能无法提供解决方案。+
+   本人将原作者的配置分别在GNU/Linux和WSL上尝试部署过，结果如下：
+   * 在GNU/Linux下可正常运行
+   * 在WSL+VcXsrv的方案下
+    * 部分字符显示不正常，可能与字体不全有关
+    * EAF由于未知原因无法运行
+    * vterm需要解决dbus的问题后才能使用
+    * 由于目前WSL无法直连硬件，整个WSL子系统都无法直接播放音乐，所以bongo也无法使用
 ** COMMENT org-capture
    如果你要使用作者的org-capture捕获思路，那么请你创建以下几个文件:
    - *~/Documents/org/capture/task.org* :: 工作任务/学习任务
@@ -44,12 +55,10 @@
        ,** Trace
      #+end_src
    - *~/Documents/org/capture/word.org* :: 记录生词
-** telega的安装方式
-   telega是emacs下的一个telegram客户端，你首先得编译tdlib，才能使用telega，tdlib的安装方式可以在这里找到: [[https://github.com/tdlib/td][tdlib 主页]]
 * 常见问题
 ** 暂时没有！欢迎提交Issue或在QQ群讨论.
 * 其他
-  本配置配套视频讲解(保姆级别超级详细)
+  本配置配套视频讲解(注：由原作者提供)(保姆级别超级详细)
   [[https://www.bilibili.com/video/BV19p4y1X7W3][戳我观看视频！]]
   
   QQ群: 466898428
