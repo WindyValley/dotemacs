@@ -29,4 +29,15 @@
               ) 
   :hook (prog-mode . hs-minor-mode))
 
+;; 选中的内容在输入时被替换
+(use-package delsel
+  :ensure nil
+  :hook (after-init . delete-selection-mode))
+
+;; 自动重新加载被外部程序修改的文件
+(use-package autorevert
+  :ensure nil
+  :diminish
+  :hook (after-init . global-auto-revert-mode))
+
 (provide 'init-internalmode)
