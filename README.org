@@ -1,5 +1,8 @@
 #+STARTUP: overview
 #+AUTHOR: Evan Meek & WindyValley
+* 声明
+  当前分支已经废弃，基于这份配置从头做的配置文件放在[[https://github.com/WindyValley/.emacs.d/tree/main][main]]分支
+  
 * 简介
   [[file:var/banner/EvanEmacsPreview.png]]
   本配置是基于[[https://github.com/EvanMeek][EvanMeek]]的Emacs配置调整所得，本人正处于Emacs学习阶段，对于配置内容并不算熟悉，如有疑问请加群（作者创建，群号在末尾）。
