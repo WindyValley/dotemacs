@@ -22,17 +22,13 @@
 (delete-selection-mode 1)
 ;; 高亮当前行
 (global-hl-line-mode 1)
-
+;; 高亮配对的括号
+(show-paren-mode 1)
 ;; 禁用启动界面
 (setq inhibit-startup-screen t
 			inhibit-startup-message t)
 ;; 关闭备份文件
 (setq make-backup-files nil)
-
-;; 回到上一次光标的位置
-(use-package saveplace
-  :ensure nil
-  :hook (after-init . save-place-mode))
 
 ;; 更友好和平滑的滚动
 (setq scroll-step 2
@@ -55,28 +51,5 @@
 (setq-default tab-width 2)
 (setq tab-width 2)
 (setq-default indent-tabs-mode t)
-
-(use-package which-key
-  :ensure t
-  :custom
-  (which-key-popup-type 'side-window)
-  :config
-  (which-key-mode))
-
-(use-package newcomment
-  :ensure nil
-  :bind ([remap comment-dwim] . #'comment-or-uncomment)
-  :config
-  (defun comment-or-uncomment ()
-    (interactive)
-    (if (region-active-p)
-        (comment-or-uncomment-region (region-beginning) (region-end))
-      (if (save-excursion
-            (beginning-of-line)
-            (looking-at "\\s-*$"))
-          (call-interactively 'comment-dwim)
-        (comment-or-uncomment-region (line-beginning-position) (line-end-position)))))
-  :custom
-  (comment-auto-fill-only-comments t))
 
 (provide 'init-editor)

@@ -1,16 +1,19 @@
-(setq fonts '("FiraCode Nerd Font" "Sarasa Mono SC"))
-(set-face-attribute 'default nil :font
-									(font-spec :family (car fonts) :size 15))
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-	(set-fontset-font (frame-parameter nil 'font) charset
-									(font-spec :family (car (cdr fonts)) :size 18)))
+(push '(progn
+				 (setq fonts '("FiraCode Nerd Font" "Sarasa Mono SC"))
+				 (set-face-attribute 'default nil :font
+														 (font-spec :family (car fonts) :size 15))
+				 (dolist (charset '(kana han symbol cjk-misc bopomofo))
+					 (set-fontset-font (frame-parameter nil 'font) charset
+														 (font-spec :family (car (cdr fonts)) :size 18)))
 
 ;; (setq fonts '("Sarasa Mono SC Nerd"))
 ;; (set-face-attribute 'default nil :font
 ;; 										(font-spec :family (car fonts) :size 18))
 
-(add-to-list 'default-frame-alist '(width . 800))
-(add-to-list 'default-frame-alist '(height . 600))
+				 (add-to-list 'default-frame-alist '(width . 800))
+				 (add-to-list 'default-frame-alist '(height . 600))
+				 )
+			graphic-only-plugins-setting)
 
 (use-package dracula-theme
 	:ensure t
