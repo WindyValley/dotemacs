@@ -15,7 +15,7 @@
  ;; If there is more than one, they won't work right.
  '(delete-selection-mode nil)
  '(package-selected-packages
-	 '(org-roam projectile which-key posframe all-the-icons-dired all-the-icons dracula-theme use-package)))
+	 '(projectile which-key posframe all-the-icons-dired all-the-icons dracula-theme use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

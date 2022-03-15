@@ -5,7 +5,8 @@
 														 (org-superstar-mode 1))))
 
 (use-package org-roam
-  :ensure t
+  :ensure nil
+	:disabled
   :custom
   (org-roam-directory (file-truename "~/Documents/org"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
@@ -23,6 +24,8 @@
   (require 'org-roam-protocol))
 
 (use-package org-roam-ui
+	:ensure nil
+	:disabled
 	:after org-roam
 ;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
 ;;         a hookable mode anymore, you're advised to pick something yourself
