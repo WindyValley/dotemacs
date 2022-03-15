@@ -1,5 +1,5 @@
 (push '(progn
-				 (setq fonts '("FiraCode Nerd Font" "Sarasa Mono SC"))
+				 (setq fonts '("FiraCode NF" "Sarasa Mono SC"))
 				 (set-face-attribute 'default nil :font
 														 (font-spec :family (car fonts) :size 15))
 				 (dolist (charset '(kana han symbol cjk-misc bopomofo))
