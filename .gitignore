@@ -2,3 +2,6 @@ elpa/
 auto-save-list/
 places
 recentf
+.org-id-locations
+bookmarks
+org-roam.db

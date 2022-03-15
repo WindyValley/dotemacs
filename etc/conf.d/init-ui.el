@@ -13,7 +13,7 @@
 				 (add-to-list 'default-frame-alist '(width . 800))
 				 (add-to-list 'default-frame-alist '(height . 600))
 				 )
-			graphic-only-plugins-setting)
+			graphic-only-plugins-settings)
 
 (use-package dracula-theme
 	:ensure t
