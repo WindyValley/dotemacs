@@ -9,9 +9,7 @@
 ;; (setq fonts '("Sarasa Mono SC Nerd"))
 ;; (set-face-attribute 'default nil :font
 ;; 										(font-spec :family (car fonts) :size 18))
-
-				 (add-to-list 'default-frame-alist '(width . 800))
-				 (add-to-list 'default-frame-alist '(height . 600))
+				 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 				 )
 			graphic-only-plugins-settings)
 
