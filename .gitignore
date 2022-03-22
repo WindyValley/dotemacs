@@ -1,5 +1,7 @@
 elpa/
 auto-save-list/
+server/
+eshell/
 places
 recentf
 .org-id-locations
