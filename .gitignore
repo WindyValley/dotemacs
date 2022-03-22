@@ -5,3 +5,4 @@ recentf
 .org-id-locations
 bookmarks
 org-roam.db
+etc/conf.d/init-custom.el

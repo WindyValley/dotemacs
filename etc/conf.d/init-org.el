@@ -1,3 +1,22 @@
+(use-package org
+	:ensure nil
+	:hook (org-mode . visual-line-mode)
+	:custom
+	(org-directory "f:/Documents/orgs/")
+	(org-default-notes-file (expand-file-name "notes.org" org-directory))
+	(org-display-inline-images 'cache))
+
+(use-package org-agenda
+	:ensure nil
+	:hook (org-agenda-finalize . org-agenda-to-appt)
+	:custom
+	(org-agenda-files (list (expand-file-name "TODO.org" org-directory)))
+	(org-diary-file (expand-file-name "diary.org" org-directory))
+	(org-agenda-insert-diary-extract-time t)
+	(org-agenda-restore-windows-after-quit t)
+	(org-agenda-window-setup 'current-window)
+	)
+
 (use-package org-superstar
 	:ensure t
 	:config
@@ -6,9 +25,9 @@
 
 (use-package org-roam
   :ensure nil
-	:disabled
+  :disabled
   :custom
-  (org-roam-directory (file-truename "~/Documents/org"))
+  (org-roam-directory org-directory)
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)
