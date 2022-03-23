@@ -65,6 +65,7 @@
   (set-face-bold 'rainbow-delimiters-depth-9-face "t")
 	(add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
+;; 图标集，需要运行 all-the-icons-install-fonts 安装字体
 (use-package all-the-icons 
   :ensure t) 
 (use-package all-the-icons-dired 
