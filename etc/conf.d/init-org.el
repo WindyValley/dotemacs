@@ -2,7 +2,6 @@
 	:ensure nil
 	:hook (org-mode . visual-line-mode)
 	:custom
-	(org-directory "f:/Documents/orgs/")
 	(org-default-notes-file (expand-file-name "notes.org" org-directory))
 	(org-display-inline-images 'cache))
 
