@@ -2,7 +2,7 @@
                          ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
                          ("melpa-stable" . "http://mirrors.ustc.edu.cn/elpa/melpa-stable/")
                          ("org" . "http://mirrors.ustc.edu.cn/elpa/org/")))
-
+(setq package-native-compile t)
 (require 'package)
 (package-initialize)
 (unless (package-installed-p 'use-package)

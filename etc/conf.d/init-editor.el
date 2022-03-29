@@ -52,4 +52,7 @@
 (setq tab-width 2)
 (setq-default indent-tabs-mode t)
 
+(setq visible-bell nil
+			ring-bell-function 'ignore)
+
 (provide 'init-editor)
