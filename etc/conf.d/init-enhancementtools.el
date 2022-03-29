@@ -128,10 +128,7 @@
   :bind (:map leader-key
               ("p" . #'projectile-command-map)))
 
-(use-package neotree
-	:ensure t
-	:bind (("<f8>" . 'neotree-toggle))
-	:custom
-	(neotheme (if (display-graphic-p) 'icon 'arrow)))
+;; treemacs的配置太长了，单分一个文件
+(require 'init-treemacs)
 
 (provide 'init-enhancementtools)

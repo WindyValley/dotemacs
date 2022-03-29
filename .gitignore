@@ -8,3 +8,5 @@ recentf
 bookmarks
 org-roam.db
 etc/conf.d/init-custom.el
+/transient/
+/.cache/
