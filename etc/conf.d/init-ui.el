@@ -30,15 +30,6 @@
 	:ensure t
 	:hook (prog-mode . indent-guide-mode))
 
-;; 彩虹猫进度条
-(use-package nyan-mode
-	:if (not (boundp 'awesome-tray-mode))
-	:ensure t
-	:hook (after-init . nyan-mode)
-	:config
-	(setq nyan-wavy-trail t
-				nyan-animate-nyancat t))
-
 ;; 彩虹括号
 (use-package 
   rainbow-delimiters 
