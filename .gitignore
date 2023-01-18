@@ -10,3 +10,6 @@ org-roam.db
 etc/conf.d/init-custom.el
 /transient/
 /.cache/
+/org-persist/
+/eln-cache/
+/.lsp-session-v1
