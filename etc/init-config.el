@@ -17,6 +17,7 @@
 (require 'init-devel)
 (require 'init-git)
 (require 'init-org)
+(require 'init-majormode)
 
 (require 'init-graphic)
 (provide 'init-config)
